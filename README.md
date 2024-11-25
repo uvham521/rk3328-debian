@@ -1,7 +1,7 @@
 ### 前置工作
 
 ```bash
-sudo apt install vim git curl
+sudo apt install vim git curl unzip
 ```
 
 #### 网络代理（可选）
