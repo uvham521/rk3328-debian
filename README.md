@@ -25,5 +25,12 @@ sudo DOWNLOAD_URL=https://mirrors.ustc.edu.cn/docker-ce sh get-docker.sh
 #### 安装依赖
 
 ```bash
-sudo apt install genimage dosfstools mtools
+# toolchain
+sudo apt install -y make gcc gcc-aarch64-linux-gnu
+
+# u-boot
+sudo apt install -y bc bison flex swig libssl-dev python3 python3-dev python3-setuptools python3-pyelftools
+
+# genimage
+sudo apt install -y genimage dosfstools mtools
 ```
