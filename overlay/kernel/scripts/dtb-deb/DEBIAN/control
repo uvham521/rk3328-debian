@@ -3,6 +3,6 @@ Version: KERNELVERSION-1
 Section: kernel
 Priority: optional
 Architecture: arm64
-Maintainer: Chris Blake <chris@cblake.io>
-Homepage: https://github.com/riptidewave93/rk3328-debian
+Maintainer: uvham521 <uvham521@outlook.com>
+Homepage: https://github.com/uvham521/rk3328-debian
 Description: Device Trees for rk3328 boards, built from mainline.
