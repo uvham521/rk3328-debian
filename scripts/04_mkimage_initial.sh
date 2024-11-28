@@ -6,18 +6,18 @@ SCRIPT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)"
 . ${SCRIPT_PATH}/config.sh
 
 # 开始清理旧文件
-echo "Cleaning up..."
+debug_msg "Cleaning up..."
 
 # 如果存在 boot.vfat 文件，则删除并输出提示
 if [ -f "${BUILD_PATH}/boot.vfat" ]; then
 	rm -rf "${BUILD_PATH}/boot.vfat"
-	echo "Deleted: ${BUILD_PATH}/boot.vfat"
+	debug_msg "Deleted: ${BUILD_PATH}/boot.vfat"
 fi
 
 # 如果存在 rootfs.ext4 文件，则删除并输出提示
 if [ -f "${BUILD_PATH}/rootfs.ext4" ]; then
 	rm -rf "${BUILD_PATH}/rootfs.ext4"
-	echo "Deleted: ${BUILD_PATH}/rootfs.ext4"
+	debug_msg "Deleted: ${BUILD_PATH}/rootfs.ext4"
 fi
 
 # 创建一个临时目录，供生成镜像文件时使用

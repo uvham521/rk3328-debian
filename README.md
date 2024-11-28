@@ -26,9 +26,12 @@ sudo apt install -y make gcc gcc-aarch64-linux-gnu
 # u-boot
 sudo apt install -y bc bison flex swig libssl-dev python3 python3-dev python3-setuptools python3-pyelftools
 
- # kernel
+# kernel
 sudo apt install -y dpkg-dev debhelper rsync
 
 # genimage
 sudo apt install -y genimage dosfstools mtools
+
+# rootfs
+sudo apt install -y debootstrap qemu-user-static
 ```
