@@ -14,6 +14,10 @@ ATF_FILENAME="rkbin-master.zip"
 UBOOT_SRC="https://github.com/u-boot/u-boot/archive/refs/tags/v2024.04-rc3.zip"
 UBOOT_FILENAME="u-boot-2024.04-rc3.zip"
 
+# Kernel
+KERNEL_SRC="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.7.12.tar.gz"
+KERNEL_FILENAME="linux-6.7.12.tar.gz"
+
 debug_msg() {
     BLU='\033[0;32m'
     NC='\033[0m'
