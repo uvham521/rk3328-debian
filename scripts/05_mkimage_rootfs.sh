@@ -28,7 +28,6 @@ cleanup() {
     fi
     # 删除构建目录
     rm -rf ${build_path}/rootfs
-    rm -rf ${BUILD_PATH}/disk-signature.txt
 }
 
 # 捕获脚本退出或中断信号，并执行清理
@@ -71,8 +70,8 @@ UBOOTUUID=$(cat ${BUILD_PATH}/disk-signature.txt | awk '{print tolower($0)}')
 sudo sed -i "s|PLACEHOLDERUUID|${UBOOTUUID:2}|g" ${BUILD_PATH}/rootfs/etc/fstab
 
 # Hostname
-debug_msg "debian" | sudo tee ${BUILD_PATH}/rootfs/etc/hostname > /dev/null
-debug_msg "127.0.1.1	debian" | sudo tee -a ${BUILD_PATH}/rootfs/etc/hosts > /dev/null
+echo "debian" | sudo tee ${BUILD_PATH}/rootfs/etc/hostname > /dev/null
+echo "127.0.1.1	debian" | sudo tee -a ${BUILD_PATH}/rootfs/etc/hosts > /dev/null
 
 # Console settings
 cat <<EOF | sudo tee ${BUILD_PATH}/rootfs/debconf.set >/dev/null
