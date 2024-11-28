@@ -1,7 +1,9 @@
 ### 前置工作
 
+脚本运行环境为 Debian 12，需提前安装以下工具：
+
 ```bash
-sudo apt install vim git curl unzip
+sudo apt install git curl unzip
 ```
 
 #### 网络代理（可选）
@@ -13,13 +15,6 @@ export https_proxy=http://192.168.1.210:7890
 EOT
 
 source ~/.bashrc
-```
-
-#### 安装 Docker
-
-```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo DOWNLOAD_URL=https://mirrors.ustc.edu.cn/docker-ce sh get-docker.sh
 ```
 
 #### 安装依赖
